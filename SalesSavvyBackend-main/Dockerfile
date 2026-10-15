@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY .mvn/ .mvn/
 COPY mvnw pom.xml ./
+COPY src ./src
+
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
@@ -12,4 +14,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
 
-CMD ["java", "-jar", "app.jar"]
+EXPOSE 9090
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
