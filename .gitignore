@@ -1,0 +1,9 @@
+﻿.idea/
+**/node_modules/
+**/dist/
+**/target/
+**/.DS_Store
+*.iml
+.env
+.env.*
+!.env.example

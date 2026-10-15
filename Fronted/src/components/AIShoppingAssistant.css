@@ -1,0 +1,192 @@
+
+.sales-ai {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    font-family: inherit;
+}
+
+.sales-ai-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.sales-ai-toggle:hover {
+    background: #1d4ed8;
+}
+
+.sales-ai-panel {
+    display: flex;
+    flex-direction: column;
+    width: min(360px, calc(100vw - 32px));
+    height: min(500px, calc(100vh - 110px));
+    margin-bottom: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: white;
+    color: #111827;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.sales-ai-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #1d4ed8;
+    color: white;
+}
+
+.sales-ai-header div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sales-ai-header span {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.sales-ai-close {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.sales-ai-messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.sales-ai-message {
+    max-width: 88%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.sales-ai-message.assistant {
+    align-self: flex-start;
+    background: #f3f4f6;
+}
+
+.sales-ai-message.user {
+    align-self: flex-end;
+    background: #dbeafe;
+}
+
+.sales-ai-error {
+    margin: 0;
+    padding: 0 16px 10px;
+    color: #b91c1c;
+    font-size: 13px;
+}
+
+.sales-ai-form {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.sales-ai-form input {
+    min-width: 0;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.sales-ai-form button {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.sales-ai-form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+@media (max-width: 480px) {
+    .sales-ai {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+.sales-ai-markdown {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+.sales-ai-markdown p {
+    margin: 0 0 10px;
+}
+
+.sales-ai-markdown p:last-child {
+    margin-bottom: 0;
+}
+
+.sales-ai-markdown ul,
+.sales-ai-markdown ol {
+    padding-left: 22px;
+    margin: 8px 0;
+}
+
+.sales-ai-markdown table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.sales-ai-markdown th,
+.sales-ai-markdown td {
+    padding: 7px 9px;
+    border: 1px solid #d5dbe5;
+    text-align: left;
+    vertical-align: top;
+}
+
+.sales-ai-markdown th {
+    background: #e8eefb;
+    font-weight: 600;
+}
+
+.sales-ai-markdown pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.sales-ai-markdown > :last-child {
+    margin-bottom: 0;
+}
